@@ -1,0 +1,85 @@
+﻿@model Assignment.Models.UsersDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Users</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptId)
+        </dt>
+
+        <dd>
+            <%: Html.DropDownListFor(model => model.Departments, Model.Departments)
+            @*@Html.DisplayFor(model => model.DeptId)*@
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            Hobbies :
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Playing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Playing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Swimming)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Swimming)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Singing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Singing)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
